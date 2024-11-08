@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prescription Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .result-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .image-container {
+            margin-bottom: 20px;
+        }
+        .text-container {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 600px;
+            white-space: pre-wrap; /* Preserve whitespace */
+        }
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prescription Results</h1>
+    <div class="result-container">
+        <div class="image-container">
+            <h2>Uploaded Prescription:</h2>
+            <img src="{{ image_path }}" alt="Prescription Image" style="max-width: 100%; height: auto;">
+        </div>
+        <div class="text-container">
+            <h3>Extracted Text:</h3>
+            <p>{{ text }}</p>
+        </div>
+        <a href="/" class="back-button">Upload Another Prescription</a>
+    </div>
+</body>
+</html>
